@@ -63,6 +63,7 @@ class FormEmployee extends Component {
                         <div className="form-data">
                             <label htmlFor="name">Titre du Film</label>
                             <input
+                                required
                                 type="text"
                                 id="name"
                                 name="name"
@@ -74,6 +75,7 @@ class FormEmployee extends Component {
                         <div className="form-data">
                             <label htmlFor="poster">Url</label>
                             <input
+                            required
                                 type="text"
                                 id="poster"
                                 name="poster"
@@ -85,6 +87,7 @@ class FormEmployee extends Component {
                         <div className="form-data2">
                             <label htmlFor="comment">Commentaires</label>
                             <input
+                            required
                                 type="textarea"
                                 id="comment"
                                 name="comment"
