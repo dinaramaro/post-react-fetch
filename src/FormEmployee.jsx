@@ -26,25 +26,25 @@ class FormEmployee extends Component {
         const config = {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(this.state),
-           };
-        
+        };
+
         const url = "http://92.175.11.66:3001/api/quests/movies/";
 
         fetch(url, config)
-.then(res => res.json())
- .then(res => {
-   if (res.error) {
-     alert(res.error);
-   } else {
-     alert(`Film ajouté avec l'ID ${res}!`);
-   }
- }).catch(e => {
-   console.error(e);
-   alert('Erreur lors de l\'ajout d\'un film');
- });
+            .then(res => res.json())
+            .then(res => {
+                if (res.error) {
+                    alert(res.error);
+                } else {
+                    alert(`Film ajouté avec l'ID ${res}!`);
+                }
+            }).catch(e => {
+                console.error(e);
+                alert('Erreur lors de l\'ajout d\'un film');
+            });
 
 
     }
@@ -74,7 +74,7 @@ class FormEmployee extends Component {
                         <div className="form-data">
                             <label htmlFor="poster">Url</label>
                             <input
-                                type="poster"
+                                type="text"
                                 id="poster"
                                 name="poster"
                                 onChange={this.onChange}
@@ -82,10 +82,10 @@ class FormEmployee extends Component {
                             />
                         </div>
 
-                        <div className="form-data">
+                        <div className="form-data2">
                             <label htmlFor="comment">Commentaires</label>
                             <input
-                                type="comment"
+                                type="textarea"
                                 id="comment"
                                 name="comment"
                                 onChange={this.onChange}
